@@ -1,9 +1,8 @@
-import { CollectionEntry, getCollection, getEntry } from 'astro:content';
-import fs from "node:fs";
+import { CollectionEntry, getCollection, } from 'astro:content';
 
 export type Chapter = CollectionEntry<'chapters'>;
 
-export const languages = fs.readdirSync("./src/content/chapters");
+export const languages = ['en'];
 
 export function getChapters(lang: string): Promise<Chapter[]> {
   return getCollection('chapters', ({ id }) => id.startsWith(lang));
