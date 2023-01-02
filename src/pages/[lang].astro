@@ -1,0 +1,66 @@
+---
+import { languages, getChapters } from "../core/Chapter";
+import Layout from "../layouts/Layout.astro";
+import Hero from "../ui/cover/Hero.astro";
+import Title from "../ui/cover/Title.astro";
+import Subtitle from "../ui/cover/Subtitle.astro";
+import Link from "../ui/Link.astro";
+import Section from "../ui/cover/Section.astro";
+
+const { lang } = Astro.params;
+const chapters = await getChapters(lang || "en");
+const {
+  Content: Cover,
+  headings: [{ text: title }],
+} = await chapters[0].render();
+
+const renderedChapters = await Promise.all(
+  chapters.slice(1).map(async (chapter) => ({
+    slug: chapter.slug,
+    ...(await chapter.render()),
+  }))
+);
+
+export function getStaticPaths() {
+  return languages.map((lang) => ({ params: { lang } }));
+}
+---
+
+<Layout lang={lang} title={title}>
+  <Hero>
+    <Cover components={{ h1: Title, h2: Subtitle }} />
+  </Hero>
+  <Section>
+    <span slot="title">Chapters</span>
+    {
+      renderedChapters.map((chapter, index) => (
+        <li>
+          <Link href={`/${chapter.slug}`} title={chapter.headings[0].text}>
+            {index + 1} - {chapter.headings[0].text}
+          </Link>
+        </li>
+      ))
+    }
+  </Section>
+  <Section>
+    <span slot="title">Credits</span>
+    <div class="flex flex-col">
+      <span
+        >Original content by <Link
+          href="https://www.youtube.com/@YUGOPNIK"
+          title="YUGOPNIK">YUGOPNIK</Link
+        >. Check out the <Link
+          href="https://www.youtube.com/watch?v=MlP0nvJSshU"
+          title="The Socialist guide to surviving in Capitalism"
+          >original video</Link
+        > and give him a follow :)
+      </span>
+      <span
+        >Website by <Link
+          href="https://github.com/rafael-pinheiro"
+          title="Rafael Pinheiro">Rafael Pinheiro</Link
+        >
+      </span>
+    </div>
+  </Section>
+</Layout>

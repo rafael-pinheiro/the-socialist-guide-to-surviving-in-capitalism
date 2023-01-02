@@ -1,0 +1,9 @@
+---
+interface Props {
+  url: string;
+}
+
+const { url } = Astro.props;
+---
+
+<meta http-equiv="refresh" content={`0; url = ${url}`} />

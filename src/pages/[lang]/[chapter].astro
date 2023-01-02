@@ -1,0 +1,49 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import type { Chapter as ChapterType } from "../../core/Chapter";
+import Chapter from "../../ui/chapter/Chapter.astro";
+import Redirect from "../../ui/Redirect.astro";
+
+export async function getStaticPaths() {
+  const chapters = await getCollection("chapters");
+  return chapters.map((chapter) => {
+    const [lang, chapterName] = chapter.slug.split("/");
+
+    return {
+      params: {
+        lang,
+        chapter: chapterName,
+      },
+      props: {
+        lang,
+        chapter,
+      },
+    };
+  });
+}
+
+interface Props {
+  lang: string;
+  chapter: ChapterType;
+}
+
+const { lang, chapter } = Astro.props;
+const {
+  Content,
+  headings: [{ text: title }],
+} = await chapter.render();
+const isCover = chapter.slug.endsWith("0-Cover");
+---
+
+{
+  isCover ? (
+    <Redirect url={`/${lang}`} />
+  ) : (
+    <Layout lang={lang} title={title}>
+      <Chapter>
+        <Content />
+      </Chapter>
+    </Layout>
+  )
+}

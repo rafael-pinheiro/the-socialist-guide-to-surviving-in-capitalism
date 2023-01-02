@@ -1,0 +1,11 @@
+---
+import Previous from "./icons/Previous.astro";
+import Next from "./icons/Next.astro";
+import Link from "../Link.astro";
+---
+
+<nav class="flex gap-4 justify-center items-center text-amber-500 py-3">
+  <Link href="" title="Previous chapter" rel="prev"><Previous size={2} /></Link>
+  <Link href="/en" title="Cover">Cover</Link>
+  <Link href="" title="Next chapter" rel="next"><Next size={2} /></Link>
+</nav>

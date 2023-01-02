@@ -1,0 +1,23 @@
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd"
+  viewBox="0 0 400 400"
+>
+  <defs>
+    <style type="text/css">
+      .fil1 {
+        fill: #de0000;
+      }
+    </style>
+  </defs>
+  <path
+    class="fil1"
+    d="M49 287l29 28 53 -53c50,51 124,39 150,7 59,-75 40,-151 -74,-229 63,69 105,137 43,195 -37,31 -93,37 -137,-8l-64 60z"
+  ></path>
+  <path
+    class="fil1"
+    d="M326 296l-175 -167 37 -33 -53 -14 -62 61 33 32 26 -26 169 170 25 -23z"
+  ></path>
+</svg>

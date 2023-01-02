@@ -1,0 +1,11 @@
+@font-face {
+  font-family: freich;
+  src: url(/fonts/freich.woff2),
+    url(/fonts/freich.woff);
+}
+
+@font-face {
+  font-family: freich-fill;
+  src: url(/fonts/freich-fill.woff2),
+    url(/fonts/freich-fill.woff);
+}
