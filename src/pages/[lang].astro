@@ -14,13 +14,6 @@ const {
   headings: [{ text: title }],
 } = await chapters[0].render();
 
-const renderedChapters = await Promise.all(
-  chapters.slice(1).map(async (chapter) => ({
-    slug: chapter.slug,
-    ...(await chapter.render()),
-  }))
-);
-
 export function getStaticPaths() {
   return languages.map((lang) => ({ params: { lang } }));
 }
@@ -33,10 +26,10 @@ export function getStaticPaths() {
   <Section>
     <span slot="title">Chapters</span>
     {
-      renderedChapters.map((chapter, index) => (
+      chapters.slice(1).map((chapter, index) => (
         <li>
-          <Link href={`/${chapter.slug}`} title={chapter.headings[0].text}>
-            {index + 1} - {chapter.headings[0].text}
+          <Link href={`/${chapter.slug}`} title={chapter.data.title}>
+            {index + 1} - {chapter.data.title}
           </Link>
         </li>
       ))
