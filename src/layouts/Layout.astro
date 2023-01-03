@@ -33,7 +33,7 @@ const config: Config = {
 		<script>
 			import { webVitals } from "../framework/vitals";
 			const { analyticsId } = window.config;
-
+			console.log(analyticsId);
 			if (analyticsId !== "") {
 				webVitals({
 					analyticsId,
