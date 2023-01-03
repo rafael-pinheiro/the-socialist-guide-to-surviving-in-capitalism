@@ -9,7 +9,7 @@ interface Props {
 const { chapter } = Astro.props;
 ---
 
-<Navigation />
+<Navigation chapter={chapter} />
 <article>
   <header
     class="flex flex-col gap-4 text-center bg-commie text-white py-10 -mt-1 rounded-b-md"

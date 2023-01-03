@@ -31,7 +31,7 @@ interface Props {
 const { lang, chapter } = Astro.props;
 const { Content } = await chapter.render();
 const { title } = chapter.data;
-const isCover = chapter.slug.endsWith("0-Cover");
+const isCover = chapter.slug.endsWith("0-cover");
 ---
 
 {

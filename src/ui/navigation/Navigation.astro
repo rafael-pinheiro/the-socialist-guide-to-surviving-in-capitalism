@@ -1,18 +1,37 @@
 ---
+import { Chapter, getLanguage, getNext, getPrevious } from "../../core/Chapter";
 import Previous from "./icons/Previous.astro";
 import Next from "./icons/Next.astro";
 import Link from "../Link.astro";
+
+interface Props {
+  chapter: Chapter;
+}
+const { chapter } = Astro.props;
+const previousChapter = await getPrevious(chapter);
+const nextChapter = await getNext(chapter);
+const lang = getLanguage(chapter);
 const linkStyle = "hover:text-white";
 ---
 
 <nav
   class="sticky top-0 left-0 right-0 flex gap-4 rounded-b-md py-3 justify-center items-center text-amber-500 bg-commie"
 >
-  <Link href="" class={linkStyle} title="Previous chapter" rel="prev"
+  <Link
+    disabled={!previousChapter}
+    href={`/${previousChapter?.slug || ""}`}
+    class={linkStyle}
+    title={previousChapter?.data.title || ""}
+    rel="prev"
     ><Previous size={2} />
   </Link>
-  <Link href="/en" class={linkStyle} title="Cover">Cover</Link>
-  <Link href="" class={linkStyle} title="Next chapter" rel="next"
+  <Link href={`/${lang}`} class={linkStyle} title="Cover">Cover</Link>
+  <Link
+    disabled={!nextChapter}
+    href={`/${nextChapter?.slug || ""}`}
+    class={linkStyle}
+    title={nextChapter?.data.title || ""}
+    rel="next"
     ><Next size={2} />
   </Link>
 </nav>
