@@ -9,3 +9,9 @@
   src: url(/fonts/freich-fill.woff2),
     url(/fonts/freich-fill.woff);
 }
+
+@font-face {
+  font-family: braveold-regular;
+  src: url(/fonts/braveold-regular.woff2),
+    url(/fonts/braveold-regular.woff);
+}

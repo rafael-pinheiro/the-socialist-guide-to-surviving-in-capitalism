@@ -6,3 +6,5 @@ const chapters = defineCollection({
     sortOrder: z.number(),
   }
 });
+
+export const collections = { chapters };

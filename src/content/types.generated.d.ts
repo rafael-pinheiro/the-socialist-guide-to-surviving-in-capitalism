@@ -43,359 +43,184 @@ declare module 'astro:content' {
 
 	const entryMap: {
 		"chapters": {
-"en/Avoid-brand-obsession.mdx": {
-  id: "en/Avoid-brand-obsession.mdx",
-  slug: "en/Avoid-brand-obsession",
+"en/0-cover.mdx": {
+  id: "en/0-cover.mdx",
+  slug: "en/0-cover",
   body: string,
   collection: "chapters",
-  data: any
+  data: InferEntrySchema<"chapters">
 },
-"en/Cover.mdx": {
-  id: "en/Cover.mdx",
-  slug: "en/Cover",
+"en/1-intro.mdx": {
+  id: "en/1-intro.mdx",
+  slug: "en/1-intro",
   body: string,
   collection: "chapters",
-  data: any
+  data: InferEntrySchema<"chapters">
 },
-"en/Dont-actually-work-the-whole-time.mdx": {
-  id: "en/Dont-actually-work-the-whole-time.mdx",
-  slug: "en/Dont-actually-work-the-whole-time",
+"en/2-work.mdx": {
+  id: "en/2-work.mdx",
+  slug: "en/2-work",
   body: string,
   collection: "chapters",
-  data: any
-},
-"en/Dont-be-intimidated.mdx": {
-  id: "en/Dont-be-intimidated.mdx",
-  slug: "en/Dont-be-intimidated",
-  body: string,
-  collection: "chapters",
-  data: any
-},
-"en/Dont-care.mdx": {
-  id: "en/Dont-care.mdx",
-  slug: "en/Dont-care",
-  body: string,
-  collection: "chapters",
-  data: any
-},
-"en/Embellish-your-resume.mdx": {
-  id: "en/Embellish-your-resume.mdx",
-  slug: "en/Embellish-your-resume",
-  body: string,
-  collection: "chapters",
-  data: any
-},
-"en/Everyone-is-alienated.mdx": {
-  id: "en/Everyone-is-alienated.mdx",
-  slug: "en/Everyone-is-alienated",
-  body: string,
-  collection: "chapters",
-  data: any
-},
-"en/Everyone-is-winging-it.mdx": {
-  id: "en/Everyone-is-winging-it.mdx",
-  slug: "en/Everyone-is-winging-it",
-  body: string,
-  collection: "chapters",
-  data: any
-},
-"en/Health-is-everything.mdx": {
-  id: "en/Health-is-everything.mdx",
-  slug: "en/Health-is-everything",
-  body: string,
-  collection: "chapters",
-  data: any
-},
-"en/Hope.mdx": {
-  id: "en/Hope.mdx",
-  slug: "en/Hope",
-  body: string,
-  collection: "chapters",
-  data: any
-},
-"en/Intro.mdx": {
-  id: "en/Intro.mdx",
-  slug: "en/Intro",
-  body: string,
-  collection: "chapters",
-  data: any
-},
-"en/Limiting-consumption.mdx": {
-  id: "en/Limiting-consumption.mdx",
-  slug: "en/Limiting-consumption",
-  body: string,
-  collection: "chapters",
-  data: any
-},
-"en/MINITIPS.mdx": {
-  id: "en/MINITIPS.mdx",
-  slug: "en/MINITIPS",
-  body: string,
-  collection: "chapters",
-  data: any
-},
-"en/No-ethical-consumption-under-capitalism.mdx": {
-  id: "en/No-ethical-consumption-under-capitalism.mdx",
-  slug: "en/No-ethical-consumption-under-capitalism",
-  body: string,
-  collection: "chapters",
-  data: any
-},
-"en/No-one-will-notice-if-something-at-work-disappears.mdx": {
-  id: "en/No-one-will-notice-if-something-at-work-disappears.mdx",
-  slug: "en/No-one-will-notice-if-something-at-work-disappears",
-  body: string,
-  collection: "chapters",
-  data: any
-},
-"en/Organize.mdx": {
-  id: "en/Organize.mdx",
-  slug: "en/Organize",
-  body: string,
-  collection: "chapters",
-  data: any
-},
-"en/Renting-vs-Buying.mdx": {
-  id: "en/Renting-vs-Buying.mdx",
-  slug: "en/Renting-vs-Buying",
-  body: string,
-  collection: "chapters",
-  data: any
-},
-"en/Share-your-wage.mdx": {
-  id: "en/Share-your-wage.mdx",
-  slug: "en/Share-your-wage",
-  body: string,
-  collection: "chapters",
-  data: any
-},
-"en/Spending.mdx": {
-  id: "en/Spending.mdx",
-  slug: "en/Spending",
-  body: string,
-  collection: "chapters",
-  data: any
-},
-"en/Take-better-paying-jobs.mdx": {
-  id: "en/Take-better-paying-jobs.mdx",
-  slug: "en/Take-better-paying-jobs",
-  body: string,
-  collection: "chapters",
-  data: any
-},
-"en/Take-opportunities.mdx": {
-  id: "en/Take-opportunities.mdx",
-  slug: "en/Take-opportunities",
-  body: string,
-  collection: "chapters",
-  data: any
-},
-"en/Use-new-work-models-to-your-advantage.mdx": {
-  id: "en/Use-new-work-models-to-your-advantage.mdx",
-  slug: "en/Use-new-work-models-to-your-advantage",
-  body: string,
-  collection: "chapters",
-  data: any
-},
-"en/Use-the-benefits.mdx": {
-  id: "en/Use-the-benefits.mdx",
-  slug: "en/Use-the-benefits",
-  body: string,
-  collection: "chapters",
-  data: any
-},
-"en/Work.mdx": {
-  id: "en/Work.mdx",
-  slug: "en/Work",
-  body: string,
-  collection: "chapters",
-  data: any
-},
-"en/Working-more-does-not-equal-promotion.mdx": {
-  id: "en/Working-more-does-not-equal-promotion.mdx",
-  slug: "en/Working-more-does-not-equal-promotion",
-  body: string,
-  collection: "chapters",
-  data: any
+  data: InferEntrySchema<"chapters">
 },
 "en/avoid-brand-obsession.mdx": {
   id: "en/avoid-brand-obsession.mdx",
   slug: "en/avoid-brand-obsession",
   body: string,
   collection: "chapters",
-  data: any
-},
-"en/cover.mdx": {
-  id: "en/cover.mdx",
-  slug: "en/cover",
-  body: string,
-  collection: "chapters",
-  data: any
+  data: InferEntrySchema<"chapters">
 },
 "en/dont-actually-work-the-whole-time.mdx": {
   id: "en/dont-actually-work-the-whole-time.mdx",
   slug: "en/dont-actually-work-the-whole-time",
   body: string,
   collection: "chapters",
-  data: any
+  data: InferEntrySchema<"chapters">
 },
 "en/dont-be-intimidated.mdx": {
   id: "en/dont-be-intimidated.mdx",
   slug: "en/dont-be-intimidated",
   body: string,
   collection: "chapters",
-  data: any
+  data: InferEntrySchema<"chapters">
 },
 "en/dont-care.mdx": {
   id: "en/dont-care.mdx",
   slug: "en/dont-care",
   body: string,
   collection: "chapters",
-  data: any
+  data: InferEntrySchema<"chapters">
 },
 "en/embellish-your-resume.mdx": {
   id: "en/embellish-your-resume.mdx",
   slug: "en/embellish-your-resume",
   body: string,
   collection: "chapters",
-  data: any
+  data: InferEntrySchema<"chapters">
 },
 "en/everyone-is-alienated.mdx": {
   id: "en/everyone-is-alienated.mdx",
   slug: "en/everyone-is-alienated",
   body: string,
   collection: "chapters",
-  data: any
+  data: InferEntrySchema<"chapters">
 },
 "en/everyone-is-winging-it.mdx": {
   id: "en/everyone-is-winging-it.mdx",
   slug: "en/everyone-is-winging-it",
   body: string,
   collection: "chapters",
-  data: any
+  data: InferEntrySchema<"chapters">
 },
 "en/health-is-everything.mdx": {
   id: "en/health-is-everything.mdx",
   slug: "en/health-is-everything",
   body: string,
   collection: "chapters",
-  data: any
+  data: InferEntrySchema<"chapters">
 },
 "en/hope.mdx": {
   id: "en/hope.mdx",
   slug: "en/hope",
   body: string,
   collection: "chapters",
-  data: any
-},
-"en/intro.mdx": {
-  id: "en/intro.mdx",
-  slug: "en/intro",
-  body: string,
-  collection: "chapters",
-  data: any
+  data: InferEntrySchema<"chapters">
 },
 "en/limiting-consumption.mdx": {
   id: "en/limiting-consumption.mdx",
   slug: "en/limiting-consumption",
   body: string,
   collection: "chapters",
-  data: any
+  data: InferEntrySchema<"chapters">
 },
 "en/minitips.mdx": {
   id: "en/minitips.mdx",
   slug: "en/minitips",
   body: string,
   collection: "chapters",
-  data: any
+  data: InferEntrySchema<"chapters">
 },
 "en/no-ethical-consumption-under-capitalism.mdx": {
   id: "en/no-ethical-consumption-under-capitalism.mdx",
   slug: "en/no-ethical-consumption-under-capitalism",
   body: string,
   collection: "chapters",
-  data: any
+  data: InferEntrySchema<"chapters">
 },
 "en/no-one-will-notice-if-something-at-work-disappears.mdx": {
   id: "en/no-one-will-notice-if-something-at-work-disappears.mdx",
   slug: "en/no-one-will-notice-if-something-at-work-disappears",
   body: string,
   collection: "chapters",
-  data: any
+  data: InferEntrySchema<"chapters">
 },
 "en/organize.mdx": {
   id: "en/organize.mdx",
   slug: "en/organize",
   body: string,
   collection: "chapters",
-  data: any
+  data: InferEntrySchema<"chapters">
 },
 "en/renting-vs-Buying.mdx": {
   id: "en/renting-vs-Buying.mdx",
   slug: "en/renting-vs-Buying",
   body: string,
   collection: "chapters",
-  data: any
+  data: InferEntrySchema<"chapters">
 },
 "en/share-your-wage.mdx": {
   id: "en/share-your-wage.mdx",
   slug: "en/share-your-wage",
   body: string,
   collection: "chapters",
-  data: any
+  data: InferEntrySchema<"chapters">
 },
 "en/spending.mdx": {
   id: "en/spending.mdx",
   slug: "en/spending",
   body: string,
   collection: "chapters",
-  data: any
+  data: InferEntrySchema<"chapters">
 },
 "en/take-better-paying-jobs.mdx": {
   id: "en/take-better-paying-jobs.mdx",
   slug: "en/take-better-paying-jobs",
   body: string,
   collection: "chapters",
-  data: any
+  data: InferEntrySchema<"chapters">
 },
 "en/take-opportunities.mdx": {
   id: "en/take-opportunities.mdx",
   slug: "en/take-opportunities",
   body: string,
   collection: "chapters",
-  data: any
+  data: InferEntrySchema<"chapters">
 },
 "en/use-new-work-models-to-your-advantage.mdx": {
   id: "en/use-new-work-models-to-your-advantage.mdx",
   slug: "en/use-new-work-models-to-your-advantage",
   body: string,
   collection: "chapters",
-  data: any
+  data: InferEntrySchema<"chapters">
 },
 "en/use-the-benefits.mdx": {
   id: "en/use-the-benefits.mdx",
   slug: "en/use-the-benefits",
   body: string,
   collection: "chapters",
-  data: any
-},
-"en/work.mdx": {
-  id: "en/work.mdx",
-  slug: "en/work",
-  body: string,
-  collection: "chapters",
-  data: any
+  data: InferEntrySchema<"chapters">
 },
 "en/working-more-does-not-equal-promotion.mdx": {
   id: "en/working-more-does-not-equal-promotion.mdx",
   slug: "en/working-more-does-not-equal-promotion",
   body: string,
   collection: "chapters",
-  data: any
+  data: InferEntrySchema<"chapters">
 },
 },
 
 	};
 
-	type ContentConfig = never;
+	type ContentConfig = typeof import("./config");
 }

@@ -10,9 +10,10 @@ module.exports = {
 			},
 			fontFamily: {
 				'cover-title': ['freich', ...defaultTheme.fontFamily.sans],
-				'chapter-title': ['freich-fill', ...defaultTheme.fontFamily.sans]
+				'cover-subtitle': ['freich-fill', ...defaultTheme.fontFamily.sans],
+				'sans': ['braveold-regular', ...defaultTheme.fontFamily.sans]
 			}
 		},
 	},
-	plugins: [],
+	plugins: [require('@tailwindcss/typography')],
 };

@@ -1,22 +1,39 @@
 ---
-import { languages, getChapters } from "../core/Chapter";
-import Layout from "../layouts/Layout.astro";
-import Hero from "../ui/cover/Hero.astro";
-import Title from "../ui/cover/Title.astro";
-import Subtitle from "../ui/cover/Subtitle.astro";
-import Link from "../ui/Link.astro";
-import Section from "../ui/cover/Section.astro";
+import type { GetStaticPathsResult } from "astro";
+import { Chapter, getByLanguage } from "../../core/Chapter";
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../ui/cover/Hero.astro";
+import Title from "../../ui/cover/Title.astro";
+import Subtitle from "../../ui/cover/Subtitle.astro";
+import Link from "../../ui/Link.astro";
+import Section from "../../ui/cover/Section.astro";
 
-const { lang } = Astro.params;
-const chapters = await getChapters(lang || "en");
+export async function getStaticPaths() {
+  const chapters = await getByLanguage();
+
+  return Object.keys(chapters).reduce((result, lang) => {
+    result.push({
+      params: {
+        lang,
+      },
+      props: {
+        lang,
+        chapters: chapters[lang],
+      },
+    });
+
+    return result;
+  }, [] as GetStaticPathsResult);
+}
+interface Props {
+  lang: string;
+  chapters: Chapter[];
+}
+const { lang, chapters } = Astro.props;
 const {
   Content: Cover,
   headings: [{ text: title }],
 } = await chapters[0].render();
-
-export function getStaticPaths() {
-  return languages.map((lang) => ({ params: { lang } }));
-}
 ---
 
 <Layout lang={lang} title={title}>

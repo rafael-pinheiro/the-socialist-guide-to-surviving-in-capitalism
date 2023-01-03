@@ -1,13 +1,30 @@
-import { CollectionEntry, getCollection, } from 'astro:content';
+import { CollectionEntry, getCollection } from 'astro:content';
 
 export type Chapter = CollectionEntry<'chapters'>;
+export type ChaptersByLanguage = Record<string, Chapter[]>;
 
-export const languages = ['en'];
+const sort = (chapters: Chapter[]) => chapters.sort((a, b) => a.data.sortOrder - b.data.sortOrder);
 
-export async function getChapters(lang: string): Promise<Chapter[]> {
-  return (await getCollection('chapters', ({ id }) => id.startsWith(lang))).sort((a, b) => a.data.sortOrder - b.data.sortOrder);
+export async function getChapters(): Promise<Chapter[]> {
+  return sort(await getCollection('chapters'));
 }
 
-export async function getChapter(slug: string): Promise<Chapter> {
-  return (await getCollection('chapters', (chapter) => chapter.slug === slug))[0];
+export async function getByLanguage(): Promise<ChaptersByLanguage> {
+  const chapters = (await getCollection("chapters")).reduce(
+    (result, current) => {
+      const [lang] = current.slug.split("/");
+
+      result[lang] = result[lang] || [];
+      result[lang].push(current);
+
+      return result;
+    },
+    {} as ChaptersByLanguage
+  );
+
+  for (let language in chapters) {
+    sort(chapters[language]);
+  }
+
+  return chapters;
 }
