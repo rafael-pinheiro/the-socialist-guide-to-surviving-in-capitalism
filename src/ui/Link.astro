@@ -3,11 +3,17 @@ interface Props {
   href: string;
   title: string;
   rel?: string;
+  class?: string;
 }
 
-const { href, title, rel } = Astro.props;
+const { href, title, rel, class: className } = Astro.props;
 ---
 
-<a class="text-amber-500 hover:text-commie" href={href} title={title} rel={rel}
-  ><slot />
+<a
+  class={`${className} text-amber-500 hover:text-commie`}
+  href={href}
+  title={title}
+  rel={rel}
+>
+  <slot />
 </a>

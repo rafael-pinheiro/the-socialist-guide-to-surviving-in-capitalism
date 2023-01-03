@@ -2,10 +2,17 @@
 import Previous from "./icons/Previous.astro";
 import Next from "./icons/Next.astro";
 import Link from "../Link.astro";
+const linkStyle = "hover:text-white";
 ---
 
-<nav class="flex gap-4 justify-center items-center text-amber-500 py-3">
-  <Link href="" title="Previous chapter" rel="prev"><Previous size={2} /></Link>
-  <Link href="/en" title="Cover">Cover</Link>
-  <Link href="" title="Next chapter" rel="next"><Next size={2} /></Link>
+<nav
+  class="sticky top-0 left-0 right-0 flex gap-4 rounded-b-md py-3 justify-center items-center text-amber-500 bg-commie"
+>
+  <Link href="" class={linkStyle} title="Previous chapter" rel="prev"
+    ><Previous size={2} />
+  </Link>
+  <Link href="/en" class={linkStyle} title="Cover">Cover</Link>
+  <Link href="" class={linkStyle} title="Next chapter" rel="next"
+    ><Next size={2} />
+  </Link>
 </nav>

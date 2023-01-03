@@ -39,7 +39,7 @@ const isCover = chapter.slug.endsWith("0-Cover");
     <Redirect url={`/${lang}`} />
   ) : (
     <Layout lang={lang} title={title}>
-      <Chapter>
+      <Chapter chapter={chapter}>
         <Content />
       </Chapter>
     </Layout>
