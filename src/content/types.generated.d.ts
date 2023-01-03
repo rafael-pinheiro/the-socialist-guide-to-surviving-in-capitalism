@@ -141,9 +141,9 @@ declare module 'astro:content' {
   collection: "chapters",
   data: InferEntrySchema<"chapters">
 },
-"en/21-renting-vs-Buying.mdx": {
-  id: "en/21-renting-vs-Buying.mdx",
-  slug: "en/21-renting-vs-Buying",
+"en/21-renting-vs-buying.mdx": {
+  id: "en/21-renting-vs-buying.mdx",
+  slug: "en/21-renting-vs-buying",
   body: string,
   collection: "chapters",
   data: InferEntrySchema<"chapters">
