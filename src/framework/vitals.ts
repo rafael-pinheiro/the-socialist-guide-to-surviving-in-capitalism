@@ -16,6 +16,7 @@ function sendToAnalytics(metric: Metric, options: Options) {
     href: location.href,
     event_name: metric.name, // TTFB
     value: metric.value.toString(), // 60.20000000298023
+    speed: '',
   };
 
   if (options.debug) {
@@ -38,7 +39,6 @@ function sendToAnalytics(metric: Metric, options: Options) {
 }
 
 export function webVitals(options: Options) {
-  console.log(webVitals);
   try {
     onFID((metric) => sendToAnalytics(metric, options));
     onTTFB((metric) => sendToAnalytics(metric, options));
