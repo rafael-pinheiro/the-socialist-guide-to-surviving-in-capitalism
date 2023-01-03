@@ -1,4 +1,5 @@
 ---
+import type { Config } from "../framework/config";
 import "../styles/fonts.css";
 export interface Props {
 	title: string;
@@ -6,6 +7,10 @@ export interface Props {
 }
 
 const { title, lang } = Astro.props;
+const { VERCEL_ANALYTICS_ID, ENV } = process.env;
+const config: Config = {
+	analyticsId: VERCEL_ANALYTICS_ID || "",
+};
 ---
 
 <!DOCTYPE html>
@@ -21,7 +26,21 @@ const { title, lang } = Astro.props;
 				height: 100%;
 			}
 		</style>
-		<script defer src="/_vercel/insights/script.js"></script>
+		{ENV === "production" && <script defer src="/_vercel/insights/script.js" />}
+		<script define:vars={{ config }}>
+			window.config = config;
+		</script>
+		<script>
+			import { webVitals } from "../framework/vitals";
+			const { analyticsId } = window.config;
+
+			if (analyticsId !== "") {
+				webVitals({
+					analyticsId,
+					debug: false,
+				});
+			}
+		</script>
 	</head>
 	<body>
 		<main class="max-w-3xl min-w-[400px] mx-auto">
