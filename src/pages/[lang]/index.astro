@@ -42,38 +42,64 @@ const {
   </Hero>
   <Section>
     <span slot="title">Chapters</span>
-    {
-      chapters.slice(1).map((chapter, index) => (
-        <li>
-          <Link href={`/${chapter.slug}`} title={chapter.data.title}>
-            {index + 1} - {chapter.data.title}
-          </Link>
-        </li>
-      ))
-    }
+    <ol>
+      {
+        chapters.slice(1).map((chapter, index) => (
+          <li>
+            <Link href={`/${chapter.slug}`} title={chapter.data.title}>
+              {index + 1} - {chapter.data.title}
+            </Link>
+          </li>
+        ))
+      }
+    </ol>
   </Section>
   <Section>
     <span slot="title">Credits</span>
-    <div class="flex flex-col">
-      <span
-        >Original content by <Link
-          newTab={true}
-          href="https://www.youtube.com/@YUGOPNIK"
-          title="YUGOPNIK">YUGOPNIK</Link
-        >. Check out the <Link
-          newTab={true}
-          href="https://www.youtube.com/watch?v=MlP0nvJSshU"
-          title="The Socialist guide to surviving in Capitalism"
-          >original video</Link
-        > and give him a follow :)
-      </span>
-      <span
-        >Website by <Link
-          newTab={true}
-          href="https://github.com/rafael-pinheiro"
-          title="Rafael Pinheiro">Rafael Pinheiro</Link
-        >
-      </span>
-    </div>
+    <span
+      >Original content by <Link
+        newTab={true}
+        href="https://www.youtube.com/@YUGOPNIK"
+        title="YUGOPNIK">YUGOPNIK</Link
+      >. Check out the <Link
+        newTab={true}
+        href="https://www.youtube.com/watch?v=MlP0nvJSshU"
+        title="The Socialist guide to surviving in Capitalism"
+        >original video</Link
+      > and give him a follow :)
+    </span>
+    <span>
+      Adaptation by <Link
+        newTab={true}
+        href="https://github.com/rafael-pinheiro"
+        title="Rafael Pinheiro">Rafael Pinheiro</Link
+      >
+    </span>
+  </Section>
+  <Section>
+    <span slot="title">Contributing</span>
+
+    <span>
+      Check out how to donate some money to the original content creator here: <Link
+        newTab={true}
+        href="https://linktr.ee/Yugopnik"
+        title="YUGOPNIK">YUGOPNIK</Link
+      >
+    </span>
+    <span>
+      Donate to the developer <Link
+        newTab={true}
+        href="https://paypal.me/rbpinheiro"
+        title="Rafael Pinheiro">rbpinheiro</Link
+      >
+    </span>
+    <span>
+      Create an issue on <Link
+        newTab={true}
+        href="https://github.com/rafael-pinheiro/the-socialist-guide-to-surviving-in-capitalism"
+        title="Github">Github</Link
+      > if you found a bug, typo or to let me know that you want to help translate
+      it to other languages and that I should hurry up and make that possible!</span
+    >
   </Section>
 </Layout>
