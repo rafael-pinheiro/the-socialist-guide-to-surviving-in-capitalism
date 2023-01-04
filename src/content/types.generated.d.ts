@@ -78,51 +78,51 @@ declare module 'astro:content' {
   collection: "chapters",
   data: InferEntrySchema<"chapters">
 },
-"en/13-share-your-wage.mdx": {
-  id: "en/13-share-your-wage.mdx",
-  slug: "en/13-share-your-wage",
+"en/13-dont-quit-before-finding-an-alternative.mdx": {
+  id: "en/13-dont-quit-before-finding-an-alternative.mdx",
+  slug: "en/13-dont-quit-before-finding-an-alternative",
   body: string,
   collection: "chapters",
   data: InferEntrySchema<"chapters">
 },
-"en/14-dont-actually-work-the-whole-time.mdx": {
-  id: "en/14-dont-actually-work-the-whole-time.mdx",
-  slug: "en/14-dont-actually-work-the-whole-time",
+"en/14-share-your-wage.mdx": {
+  id: "en/14-share-your-wage.mdx",
+  slug: "en/14-share-your-wage",
   body: string,
   collection: "chapters",
   data: InferEntrySchema<"chapters">
 },
-"en/15-use-new-work-models-to-your-advantage.mdx": {
-  id: "en/15-use-new-work-models-to-your-advantage.mdx",
-  slug: "en/15-use-new-work-models-to-your-advantage",
+"en/15-dont-actually-work-the-whole-time.mdx": {
+  id: "en/15-dont-actually-work-the-whole-time.mdx",
+  slug: "en/15-dont-actually-work-the-whole-time",
   body: string,
   collection: "chapters",
   data: InferEntrySchema<"chapters">
 },
-"en/16-use-the-benefits.mdx": {
-  id: "en/16-use-the-benefits.mdx",
-  slug: "en/16-use-the-benefits",
+"en/16-use-new-work-models-to-your-advantage.mdx": {
+  id: "en/16-use-new-work-models-to-your-advantage.mdx",
+  slug: "en/16-use-new-work-models-to-your-advantage",
   body: string,
   collection: "chapters",
   data: InferEntrySchema<"chapters">
 },
-"en/17-money-spending.mdx": {
-  id: "en/17-money-spending.mdx",
-  slug: "en/17-money-spending",
+"en/17-use-the-benefits.mdx": {
+  id: "en/17-use-the-benefits.mdx",
+  slug: "en/17-use-the-benefits",
   body: string,
   collection: "chapters",
   data: InferEntrySchema<"chapters">
 },
-"en/18-avoid-brand-obsession.mdx": {
-  id: "en/18-avoid-brand-obsession.mdx",
-  slug: "en/18-avoid-brand-obsession",
+"en/18-money-spending.mdx": {
+  id: "en/18-money-spending.mdx",
+  slug: "en/18-money-spending",
   body: string,
   collection: "chapters",
   data: InferEntrySchema<"chapters">
 },
-"en/19-limiting-consumption.mdx": {
-  id: "en/19-limiting-consumption.mdx",
-  slug: "en/19-limiting-consumption",
+"en/19-avoid-brand-obsession.mdx": {
+  id: "en/19-avoid-brand-obsession.mdx",
+  slug: "en/19-avoid-brand-obsession",
   body: string,
   collection: "chapters",
   data: InferEntrySchema<"chapters">
@@ -134,30 +134,44 @@ declare module 'astro:content' {
   collection: "chapters",
   data: InferEntrySchema<"chapters">
 },
-"en/20-no-ethical-consumption-under-capitalism.mdx": {
-  id: "en/20-no-ethical-consumption-under-capitalism.mdx",
-  slug: "en/20-no-ethical-consumption-under-capitalism",
+"en/20-limiting-consumption.mdx": {
+  id: "en/20-limiting-consumption.mdx",
+  slug: "en/20-limiting-consumption",
   body: string,
   collection: "chapters",
   data: InferEntrySchema<"chapters">
 },
-"en/21-renting-vs-Buying.mdx": {
-  id: "en/21-renting-vs-Buying.mdx",
-  slug: "en/21-renting-vs-Buying",
+"en/21-no-ethical-consumption-under-capitalism.mdx": {
+  id: "en/21-no-ethical-consumption-under-capitalism.mdx",
+  slug: "en/21-no-ethical-consumption-under-capitalism",
   body: string,
   collection: "chapters",
   data: InferEntrySchema<"chapters">
 },
-"en/22-minitips.mdx": {
-  id: "en/22-minitips.mdx",
-  slug: "en/22-minitips",
+"en/22-renting-vs-Buying.mdx": {
+  id: "en/22-renting-vs-Buying.mdx",
+  slug: "en/22-renting-vs-Buying",
   body: string,
   collection: "chapters",
   data: InferEntrySchema<"chapters">
 },
-"en/23-hope.mdx": {
-  id: "en/23-hope.mdx",
-  slug: "en/23-hope",
+"en/22-renting-vs-buying.mdx": {
+  id: "en/22-renting-vs-buying.mdx",
+  slug: "en/22-renting-vs-buying",
+  body: string,
+  collection: "chapters",
+  data: InferEntrySchema<"chapters">
+},
+"en/23-minitips.mdx": {
+  id: "en/23-minitips.mdx",
+  slug: "en/23-minitips",
+  body: string,
+  collection: "chapters",
+  data: InferEntrySchema<"chapters">
+},
+"en/24-hope.mdx": {
+  id: "en/24-hope.mdx",
+  slug: "en/24-hope",
   body: string,
   collection: "chapters",
   data: InferEntrySchema<"chapters">

@@ -18,13 +18,15 @@ const { chapter } = Astro.props;
       The socialist guide to surviving in Capitalism
     </h1>
     <h2
-      class="border-t pt-4 w-fit mx-auto text-5xl font-cover-title max-w-[70%]"
+      class={`${
+        chapter.data.titleModifier || ""
+      } border-t pt-4 w-fit mx-auto text-5xl font-cover-title max-w-[70%]`}
     >
       {chapter.data.title}
     </h2>
   </header>
   <div
-    class="py-8 mx-3 prose prose-xl prose-stone prose-p:my-2 prose-headings:mt-10 prose-headings:mb-6"
+    class="py-8 mx-3 prose prose-xl prose-stone prose-p:my-2 prose-headings:mt-10 prose-headings:mb-6 prose-a:text-amber-500 hover:prose-a:text-commie prose-a:no-underline"
   >
     <slot />
   </div>
